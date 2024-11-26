@@ -52,6 +52,7 @@ python __main__.py
 
 - **Mensch vs. KI**: Spiele gegen den KI-Gegner, der den Alpha-Beta-Pruning-Algorithmus verwendet.
 - **Mensch vs. Mensch**: Zwei Spieler können gegeneinander spielen.
+- **KI vs. KI**: Zwei KI-Gegner spielen gegeneinander.
 
 ## Beispiel
 
