@@ -60,17 +60,20 @@ Alpha-Beta-Pruning-Algorithmus.
 
 Beispielausgabe:
 ```
-1 | 2 | 3 | 4 | 5 | 6 | 7
--------------------------
-0 | 0 | 0 | 0 | 0 | 0 | 0
-0 | 0 | 0 | 0 | 0 | 0 | 0
-0 | 0 | 0 | 0 | 0 | 0 | 0
-0 | 0 | 0 | 0 | 0 | 0 | 0
-0 | 0 | 0 | 0 | 0 | 0 | 0
-0 | 0 | 0 | 0 | 0 | 0 | 0
+ 1 2 3 4 5 6 7 8
+ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓
+| | | | | | | | |
+| | | | | | | | |
+| | | | | | | | |
+| | | | | | | | |
+| | | | | |O| | |
+| | | |O|O|O|O| |
+| | | |O|O|O|O|O|
+| | |O|O|O|O|O|O|
+ 1 2 3 4 5 6 7 8
 ```
 
-Der Spieler wählt eine Spalte (1-7), und der KI-Gegner reagiert entsprechend.
+Der Spieler wählt eine Spalte (1-8), und der KI-Gegner reagiert entsprechend.
 
 ## Technische Details
 
