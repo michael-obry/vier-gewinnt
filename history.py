@@ -4,8 +4,6 @@ import os
 import random
 os.system('color')
 
-
-
 #### Größe des Spielfeldes wird festgelegt und Funktion für neues Spielfeld definiert
 m=8
 n=8
@@ -262,7 +260,6 @@ class History:
         return (v, best_state)
                 
     #### Hilfsmethoden ####
-    
     def print_board(self, board):
         """Hilfsfunktion um in Console Spielfeld 'leserlich' (human-readable) zu drucken"""
         numb = " "
