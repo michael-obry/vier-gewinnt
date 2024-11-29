@@ -5,8 +5,8 @@ import random
 os.system('color')
 
 #### Größe des Spielfeldes wird festgelegt und Funktion für neues Spielfeld definiert
-m=8
-n=8
+m=6
+n=7
 
 sign_arrow = b'\xE2\x86\x93'.decode('utf8')
 
