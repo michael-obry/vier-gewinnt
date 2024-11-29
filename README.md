@@ -61,20 +61,18 @@ Alpha-Beta-Pruning-Algorithmus.
 
 Beispielausgabe:
 ```
- 1 2 3 4 5 6 7 8
- ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓
-| | | | | | | | |
-| | | | | | | | |
-| | | | | | | | |
-| | | | | | | | |
-| | | | | |O| | |
-| | | |O|O|O|O| |
-| | | |O|O|O|O|O|
-| | |O|O|O|O|O|O|
- 1 2 3 4 5 6 7 8
+ 1 2 3 4 5 6 7
+ ↓ ↓ ↓ ↓ ↓ ↓ ↓
+| | | | | | | |
+| | | |O| | | |
+| | |O|O|O| | |
+| | |O|O|O| | |
+| | |O|O|O|O| |
+| | |O|O|O|O|O|
+ 1 2 3 4 5 6 7
 ```
 
-Der Spieler wählt eine Spalte (1-8), und der KI-Gegner reagiert entsprechend.
+Der Spieler wählt eine Spalte (1-7), und der KI-Gegner reagiert entsprechend.
 
 ## Technische Details
 
@@ -86,7 +84,7 @@ der Knoten, die im Spielbaum betrachtet werden müssen, und verbessert so die Ef
 - **Alpha-Beta-Pruning**: Dieser Algorithmus "schneidet" unnötige Teile des Entscheidungsbaums ab, wodurch die Berechnungszeit verkürzt wird, ohne das Endergebnis zu beeinflussen.
 
 ### Spiellogik
-- Das Spiel wird in einem **8x8-Raster** gespielt. Ziel ist es, vier Spielsteine in einer Reihe (horizontal, vertikal oder diagonal) zu platzieren.
+- Das Spiel wird in einem **6x7-Raster** gespielt. Ziel ist es, vier Spielsteine in einer Reihe (horizontal, vertikal oder diagonal) zu platzieren.
 - Die KI verwendet den Alpha-Beta-Pruning-Algorithmus, um ihre Entscheidungen zu treffen, wobei der Spielbaum für alle möglichen zukünftigen Züge durchsucht wird.
 
 ## Mitwirkung
