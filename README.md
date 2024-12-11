@@ -83,8 +83,8 @@ der Knoten, die im Spielbaum betrachtet werden müssen, und verbessert so die Ef
 - **Minimax**: Der Algorithmus bewertet die Züge für den Spieler und die KI, indem er versucht, den besten Zug für sich selbst und den schlechtesten für den Gegner zu finden.
 - **Alpha-Beta-Pruning**: Dieser Algorithmus "schneidet" unnötige Teile des Entscheidungsbaums ab, wodurch die Berechnungszeit verkürzt wird, ohne das Endergebnis zu beeinflussen. Die
   Suchtiefe wurde auf 5 Expansionen begrenzt, um die Rechnenzeit zu veringern und den Spielfluß nicht zu stören. Da es sich um eine Tiefensuche handelt, kann es vorkommen, dass nicht optimale Pfade
-  von der KI bevorzugt werden. So wird beispielsweise der Gewinn durch der KI in manchen Fällen "herausgezögert".
-- **Heuristik**: FÜr Spielstände, bei denen es sich um keine Zielstände (unentschieden, gewonnen, verloren) handelt, wurde eine Heuristik implementiert, die je nach erkannten Mustern, Punkte für
+  von der KI bevorzugt werden. So wird beispielsweise der Sieg von der KI in manchen Fällen "hinausgezögert".
+- **Heuristik**: Für Spielstände, bei denen es sich um keine Zielstände (unentschieden, gewonnen, verloren) handelt, wurde eine Heuristik implementiert, die je nach erkannten Mustern, Punkte für
   die beiden Spieler vergibt. Dies stellt sicher, dass die KI auch ohne erkannten Zielstand leistungsstarke Züge wählt.
 
 ### Spiellogik
