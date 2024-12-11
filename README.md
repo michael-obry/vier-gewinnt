@@ -81,20 +81,15 @@ Der **Alpha-Beta-Pruning-Algorithmus** ist eine Optimierung des **Minimax-Algori
 der Knoten, die im Spielbaum betrachtet werden müssen, und verbessert so die Effizienz der Entscheidungsfindung.
 
 - **Minimax**: Der Algorithmus bewertet die Züge für den Spieler und die KI, indem er versucht, den besten Zug für sich selbst und den schlechtesten für den Gegner zu finden.
-- **Alpha-Beta-Pruning**: Dieser Algorithmus "schneidet" unnötige Teile des Entscheidungsbaums ab, wodurch die Berechnungszeit verkürzt wird, ohne das Endergebnis zu beeinflussen.
+- **Alpha-Beta-Pruning**: Dieser Algorithmus "schneidet" unnötige Teile des Entscheidungsbaums ab, wodurch die Berechnungszeit verkürzt wird, ohne das Endergebnis zu beeinflussen. Die
+  Suchtiefe wurde auf 5 Expansionen begrenzt, um die Rechnenzeit zu veringern und den Spielfluß nicht zu stören. Da es sich um eine Tiefensuche handelt, kann es vorkommen, dass nicht optimale Pfade
+  von der KI bevorzugt werden. So wird beispielsweise der Gewinn durch der KI in manchen Fällen "herausgezögert".
+- **Heuristik**: FÜr Spielstände, bei denen es sich um keine Zielstände (unentschieden, gewonnen, verloren) handelt, wurde eine Heuristik implementiert, die je nach erkannten Mustern, Punkte für
+  die beiden Spieler vergibt. Dies stellt sicher, dass die KI auch ohne erkannten Zielstand leistungsstarke Züge wählt.
 
 ### Spiellogik
 - Das Spiel wird in einem **6x7-Raster** gespielt. Ziel ist es, vier Spielsteine in einer Reihe (horizontal, vertikal oder diagonal) zu platzieren.
-- Die KI verwendet den Alpha-Beta-Pruning-Algorithmus, um ihre Entscheidungen zu treffen, wobei der Spielbaum für alle möglichen zukünftigen Züge durchsucht wird.
-
-## Mitwirkung
-
-Beiträge zu diesem Projekt sind willkommen! Falls du Fehler findest oder Ideen zur Verbesserung hast, erstelle gerne einen Pull Request oder eröffne ein Issue.
-
-### Wie beitragen:
-1. **Repository forken**.
-2. Änderungen vornehmen und committen.
-3. Einen **Pull Request** öffnen.
+- Die KI verwendet den Alpha-Beta-Pruning-Algorithmus, um ihre Entscheidungen zu treffen, wobei der Spielbaum für möglichen zukünftigen Züge (mit einer Suchtiefe von K = 5) durchsucht wird.
 
 ## Lizenz
 
