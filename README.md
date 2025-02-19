@@ -6,7 +6,7 @@ Dieses Projekt implementiert das klassische Spiel **"Vier Gewinnt"** mit einem *
 um optimale Züge zu berechnen. Der Algorithmus ist eine optimierte Version des Minimax-Algorithmus und wird verwendet, um die Entscheidungsfindung 
 der KI zu verbessern, indem nicht notwendige Knoten im Spielbaum abgeschnitten werden.
 
-Dieses Projekt wurde entwickelt, um meine Fähigkeiten in den Bereichen **künstliche Intelligenz (KI)**, **algorithmische Optimierung** und **Python-Programmierung** 
+Dieses Projekt wurde entwickelt, um meine Fähigkeiten in den Bereichen **künstliche Intelligenz (KI)** und **Python-Programmierung** 
 zu demonstrieren.
 
 ## Funktionsweise
