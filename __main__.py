@@ -5,14 +5,17 @@ new_game = True
 while new_game:
     game = history.History()
 
-    print("Willkommen zu 4 Gewinnt!\
-          \nMit der Eingabe 'b' kannst du zu deinem vorletzten Zug zurückspringen, bis du den Anfang des Spieles erreicht hast.\
-          \nMit der Eingabe 'f' kannst du wieder zu deinen alten Spielzügen vorwärtsspringen, bis du den ursprüngliche Spielstand erreicht hast.\
-          \nSpringst du (mehrmals) zurück und gibst einen neuen Spielzug ein, werden alle Spielstände bis zum aktuellen Spielstand überschrieben \
-          \nMit der Eingabe 'q' kannst du das aktuelle Spiel beenden.\
+    print("Welcome to Connect 4!\
+          \nBy entering 'b' you can jump back to your previous move "
+          "until you reach the beginning of the game.\
+          \nBy entering 'f' you can jump back to your more current moves "
+          "until you reach the current game field.\
+          \nIf you change a previous game field all more current moves are "
+          "overwritten.\
+          \nBy entering 'q' you can end the current game.\
           \n")
 
-    print("Bitte lege den Spielmodus fest.\
+    print("Please enter the game mode.\
           \n1: Person vs. Person\
           \n2: Person vs. KI\
           \n3: KI vs. Person\
@@ -21,24 +24,24 @@ while new_game:
 
     modus = None
     while True:
-            modus = input("Gib eine Zahl zwischen 1 und 4 ein: ")
+            modus = input("Enter a number between 1 and 4: ")
             try:
                 modus = int(modus)
             except ValueError:
-                print("Bitte (natürliche) Zahl von 1 bis 4 eingeben")
+                print("Please enter a (natural) number between 1 and 4: ")
             else:
                 if modus >= 1 and modus <= 4:
                     break
                 else:
-                    print("Zahl muss zwischen 1 und 4 liegen")
+                    print("Number must lie between 1 and 4.")
 
-    while game.isgameactive():
+    while game.is_game_active():
         game.print_board(game.get_current_board())
         if game.get_current_player() == 1:
-            print("Gelb ist an der Reihe!")
+            print("It's yellow's turn!")
         else:
-            print("Rot ist an der Reihe!")
-        #### Spielreihenfolge
+            print("It's red's turn!")
+        # Game order
         if modus == 1:
             game.player_input()
         elif modus == 2 and game.get_current_player() == 1:
@@ -51,23 +54,24 @@ while new_game:
             game.player_input()
         elif modus == 4:
             game.ki_input()
-        # Kontrolle, ob jemand gewonnen hat
+        # Check whether someone has won
         if game.get_current_state().control_win():
             print()
             game.print_board(game.get_current_board())
-            print("\n\n\nSpieler " + game.get_winner() + " hat gewonnen!")
+            print("\n\n\nPlayer " + game.get_winner() + " has won!")
             break
-        # Kontrolle, ob unentschieden
+        # Check whether there is a draw
         if game.get_current_state().control_draw():
             print()
             game.print_board(game.get_current_board())
-            print("\n\n\nEs steht unentschieden!")
+            print("\n\n\nIt's a draw!")
             break
         print()
 
-    ### Neues Spiel oder Spiel beenden
+    # New game or end game
     while True:
-        userinput = input("Gib 'q' ein, um das Spiel zu beenden und 'n' um ein neues Spiel zu starten : ")
+        userinput = input("Enter 'q' to end the game and 'n' to start a "
+                          "new game: ")
         if userinput== "q":
             new_game = False
             break
@@ -75,4 +79,3 @@ while new_game:
             del game
             print()
             break
-
