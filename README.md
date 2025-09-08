@@ -45,7 +45,7 @@ Dies ermöglicht der KI, schneller und trotzdem effektiv auf die Spielzüge des 
 
 Um das Spiel zu starten, führe das folgende Skript im Terminal aus:
 ```bash
-python __main__.py
+python main.py
 ```
 
 ### Spielmodi:
