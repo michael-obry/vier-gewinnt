@@ -6,8 +6,8 @@ os.system('color')
 
 # Size of the playing field is determined and function for new playing
 # field defined
-m = 6
-n = 7
+m = 8
+n = 8
 
 sign_arrow = b'\xE2\x86\x93'.decode('utf8')
 
